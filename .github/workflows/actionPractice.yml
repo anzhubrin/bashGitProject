@@ -1,8 +1,12 @@
 name: CI
 
 on:
-  schedule:
-  - cron: "0 8 * * 1"
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+  fork:
+    branches: [ "master" ]
 
   workflow_dispatch:
 
